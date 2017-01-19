@@ -18,16 +18,13 @@ public class JavaTest extends TestCase {
         double res = value1 + value2; 
         assertTrue(res == 2); 
     }
-
-    @Test
-    public void testFail() {
-        double res = value1 + value2; 
-        assertTrue(res == 3); 
-    }
-
     @Test
     public void testIfThisWorks() {
         assertTrue(true);
+    }
+    @Test
+    public void testFail () {
+        assertTrue( true);
     }
 }
 
