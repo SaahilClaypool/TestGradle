@@ -11,6 +11,5 @@ How to setup gradle with sample project
 
 Open this folder in intellij.
 To run the program, press run. 
-To run tests, navigate to the test directory and select a test to run
-(or use the command line etc)
- 
+To run test, click the dropdown next to the run button and select test.  
+(Or, run everything in the temrinal with gradle run and gradle test)
