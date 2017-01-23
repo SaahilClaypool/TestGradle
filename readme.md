@@ -4,15 +4,16 @@ Setup:
 How to setup gradle with sample project
 
 1. Clone this repo
-2. install gradle 3.2
-3. run "gradle jfxRun" from the commandline 
+2. linux / mac : run "sh gradlew jfxRun" from the command line
+    Windows: in CMD / powershell (not git bash) run "gradlew.bat jfxRun"
 
 ## Intellij: 
     Intellij needs to be told which version of gradle to use. 
-    1. hit 'Ctrl-shift-a' and type gradle
-    2. edit gradle settings
-    3. select 'Use local gradle distribution'
-    4. set the gradle hom to be wherever you extracted the gradle 3.2 folder
+    Intellij should use the 'Gradle Wrapper'
+    
+    1. When you open this project in intellij for the first time, it should         prompt you to import from a gradle project in the bottom right corner
+    2. Select 'Import Gradle Project'
+    3. 
 
 ## Install gradle
  * NOTE: install gradle 3.2 not 3.3 
