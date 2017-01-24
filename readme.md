@@ -12,7 +12,8 @@ How to setup gradle with sample project
     Intellij needs to be told which version of gradle to use. 
     Intellij should use the 'Gradle Wrapper'
     
-    1. When you open this project in intellij for the first time, it should         prompt you to import from a gradle project in the bottom right corner
+    1. When you open this project in intellij for the first time, it should
+       prompt you to import from a gradle project in the bottom right corner
     2. Select 'Import Gradle Project'
     3. Everything should run like a normal project
 
