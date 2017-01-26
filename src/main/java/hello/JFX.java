@@ -1,4 +1,5 @@
-package hello; 
+package hello;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,11 +10,10 @@ public class JFX extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        System.out.println("ABOUT TO LOAD FXML"); 
-        Parent root = FXMLLoader.load(getClass().getResource("JFX.fxml"));
-        System.out.println("LOADED FXML");
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        Parent root = FXMLLoader.load(getClass().getResource("loan.fxml"));
+        //  get input text
+        primaryStage.setTitle("Loan Calculator");
+        primaryStage.setScene(new Scene(root, 500, 300));
         primaryStage.show();
     }
 

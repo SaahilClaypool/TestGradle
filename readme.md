@@ -1,5 +1,10 @@
 Setup: 
 ======
+# why?
+Gradle is helps oragnize the compilation of our project (think 'Makefiles' for c)
+Using intellij's default organization is fine, until we start adding more features. 
+Then it becomes easier to just have an external build system. 
+This will do things like automatically downloading and setting up junit tests. 
 
 How to setup gradle with sample project
 
@@ -29,3 +34,5 @@ How to setup gradle with sample project
 # other commandline options: 
 * gradle test : run test cases
 * gradle jfxRun : run javaFx application
+
+questions? 

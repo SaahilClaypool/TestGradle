@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="hello.TextController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <VBox id="vbox" prefHeight="300.0" prefWidth="500.0">
+         <children>
+            <AnchorPane id="anchor" prefHeight="300.0" prefWidth="500.0" >
+               <children>
+                  <Label layoutX="14.0" layoutY="72.0" text="Loan Amount" />
+                  <Label layoutX="145.0" layoutY="72.0" text="Rate" />
+                  <TextField fx:id = "loan" id="loan" layoutX="12.0" layoutY="100.0" prefHeight="25.0" prefWidth="95.0" />
+                  <TextField fx:id = "rate" id="rate" layoutX="128.0" layoutY="100.0" prefHeight="25.0" prefWidth="78.0" />
+                  <TextField fx:id = "months" id="months" layoutX="242.0" layoutY="100.0" />
+                  <Label layoutX="242.0" layoutY="72.0" prefHeight="17.0" prefWidth="189.0" text="Number of Months" />
+                  <Label layoutX="12.0" layoutY="164.0" text="Monthly Payment" />
+                  <TextArea fx:id = "output" id="output" layoutX="206.0" layoutY="163.0" prefHeight="32.0" prefWidth="200.0" />
+                  <Button fx:id="submit" id="submit" layoutX="420.0" layoutY="100.0" mnemonicParsing="false" text="Submit" onAction="#printOutput" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</GridPane>
