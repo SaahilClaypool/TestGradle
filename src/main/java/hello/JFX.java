@@ -10,6 +10,13 @@ public class JFX extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+
+        EmbedSQL embedData = new EmbedSQL();
+        embedData.setupDatabase();
+        embedData.interactWithDatabase();
+        embedData.shutDown();
+
+
         Parent root = FXMLLoader.load(getClass().getResource("loan.fxml"));
         //  get input text
         primaryStage.setTitle("Loan Calculator");
