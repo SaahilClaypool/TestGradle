@@ -1,6 +1,8 @@
 package hello;
 import java.sql.*;
-import Util.*;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class EmbedSQL {
     // data
@@ -10,7 +12,7 @@ public class EmbedSQL {
     String connectionURL = "jdbc:derby:" + dbName + ";create=true";
    String createString = "CREATE TABLE WISH_LIST  "
   +  "(WISH_ID INT NOT NULL GENERATED ALWAYS AS IDENTITY,"
-  +  " WISH_ITEM VARCHAR(32) NOT NULL) " ;
+  +  " WISH_ITEM VARCHAR(50) NOT NULL) " ;
 
 
     Connection conn  = null;
@@ -51,7 +53,19 @@ public class EmbedSQL {
         try{
             System.out.println("started database");
             Statement s = conn.createStatement();
-            if(!WwdUtils.wwdChk4Table(conn)){
+            // print all tables
+            DatabaseMetaData md = conn.getMetaData();
+            ResultSet rs = md.getTables(null,
+                    null,"%", null);
+            boolean makeTable = true;
+            while(rs.next()){
+                System.out.println("Table: " + rs.getString(3));
+                if(rs.getString(3).equals("WISH_LIST")){
+                    makeTable = false;
+                }
+            }
+
+            if(makeTable){
                 System.out.println(" . . . . . creating table WISH_LIST");
                 s.execute(createString);
             }
@@ -59,12 +73,15 @@ public class EmbedSQL {
             PreparedStatement psInsert = conn.prepareStatement
                     ("insert into WISH_LIST(WISH_ITEM) values (?)");
 
-            psInsert.setString(1, "answer");
+            psInsert.setString(1,
+                    LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")));
+
+
             psInsert.execute();
 
             System.out.println("inserted into database");
 
-            ResultSet res = s.executeQuery("select  WISH_ITEM\n" +
+            ResultSet res = s.executeQuery("select  WISH_ITEM " +
                     "from WISH_LIST");
 
 

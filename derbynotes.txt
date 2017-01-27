@@ -1,0 +1,14 @@
+Derby: 
+    Tutorial: http://db.apache.org/derby/docs/10.11/getstart/rwwdactivity3.html#rwwdactivity3
+
+    Notes: 
+        There were some issues with the license, but they are gone. 
+        I believe this was an issue with the gradle plugin. 
+
+    
+    The database is stored as a file in the app directory. 
+    cleaning WILL destroy the database. 
+
+
+Implementation: 
+    each class needs a prepare statement 
